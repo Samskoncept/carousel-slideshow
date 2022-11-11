@@ -26,12 +26,13 @@ slides.forEach(setSlidePosition);
 
 // when I click right, move slide to the right 
 nextButton.addEventListener("click", e => {
-    const currentSlide = track.document.querySelector(".current-slide");
-    // console.log(currentSlide.nextElementSibling);
+    const currentSlide = track.querySelector(".current-slide");
+    const nextSlide = currentSlide.nextElementSibling;
     //move the next slide
     const amountToMove = nextSlide.style.left;
-    console.log(amountToMove)
-
+    track.style.transform = "translateX(-" + amountToMove +")";
+    currentSlide.classList.remove("current-slide");
+    nextSlide.classList.add("current-slide");
 
 })
 
