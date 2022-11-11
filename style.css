@@ -76,10 +76,11 @@
     width: 15px;
     background-color: var(--indicator-clr);
     margin: 0 12px;
+    cursor: pointer;
 
 }
-.carousel-indicator .current-slide{
-    background-color: var(--current-slide-clr);
+.carousel-indicator.current-slide{
+    background-color: var(--current-slide-clr)
 }
 
 
@@ -105,7 +106,7 @@
       position: relative;
         }
 }
-
+.is-hidden{display: none;}
 
 
 
